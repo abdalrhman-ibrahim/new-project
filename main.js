@@ -8,7 +8,8 @@ incrementBtn.addEventListener("click" , function()  {
     value += 5;
     number.textContent = value;
 
-    value % 2 === 0 && value > 20  && value !== 0  && value < 100 ? number.classList.add("ali") : number.classList.remove("ali");
+    value % 2 === 0 && value > 20  && value !== 0  && value < 100 ?
+     number.classList.add("ali") : number.classList.remove("ali");
 
 }
 );
@@ -16,5 +17,10 @@ incrementBtn.addEventListener("click" , function()  {
 decrementBtn.addEventListener( "click", function()  {
     value -= 5;
     number.textContent = value;
+    
+        value % 2 === 0 && value > 20  && value !== 0  && value < 100 ?
+     number.classList.add("ali") : number.classList.remove("ali");
+
 }
 );
+
