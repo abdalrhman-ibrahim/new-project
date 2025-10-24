@@ -1,52 +1,20 @@
-let a= 4;
-let b = 2;
-let operator = '%';
-if (operator === '+'){
-    console.log(a+b);
-}
-if (operator === '-'){
-    console.log(a-b);
-}
-if (operator === '*'){
-    console.log(a*b);
-}
+let value = 0;
+let number = document.querySelector(".num");
+number.textContent = value;
+const incrementBtn = document.querySelector(".increment");
+const decrementBtn = document.querySelector(".decremetn");
 
-if (operator === '/'){
-    console.log(a/b);
-}
-if (operator === '%'){
-    console.log(a%b);
-}
-console.log("----------------------------------------------------------");
-let c = "Abdalrhman ibrahim";
+incrementBtn.addEventListener("click" , function()  {
+    value += 5;
+    number.textContent = value;
 
-for (let i=c.length-1;i>=0;i--){
-    console.log(c[i]);
-}
-console.log("----------------------------------------------------------");
+    value % 2 === 0 && value > 20  && value !== 0  && value < 100 ? number.classList.add("ali") : number.classList.remove("ali");
 
-function factorial(n){
-    if (n === 0){
-        return 1;
-    }else
-    return n * factorial(n-1);
 }
-console.log(factorial(5));
-console.log("----------------------------------------------------------");
-for (let m= 0 ; m <=100 ; m++)
-{
-    if (m % 3 ===0  )
-    {
-        console.log("fizz");
-    }else if (m % 5 ===0 )
-    {
-        console.log("buzz");
-    }else if (m % 3 ===0 && m % 5 ===0 )
-    {
-        console.log("fizzbuzz");
-    }else
-    {
-        console.log(m);
-    }
-}
+);
 
+decrementBtn.addEventListener( "click", function()  {
+    value -= 5;
+    number.textContent = value;
+}
+);
